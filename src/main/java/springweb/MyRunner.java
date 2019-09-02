@@ -1,0 +1,26 @@
+package springweb;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import springweb.domain.Car;
+import springweb.service.CarRepository;
+
+import javax.transaction.Transactional;
+
+
+@Component
+public class MyRunner implements CommandLineRunner {
+
+    @Autowired
+    private CarRepository carRepository;
+
+    @Override
+    @Transactional
+    public void run(String... args) throws Exception {
+        Car c1 = new Car("prius", "hybrid");
+        Car c2 = new Car("prius2", "hybrid");
+        carRepository.save(c1);
+        carRepository.save(c2);
+    }
+}
