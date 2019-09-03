@@ -9,10 +9,17 @@ git:
   depth: 3
   quiet: true
 
+services:
+  - docker
+
 env:
   global:
+    # maven
     - MAVEN_BUILD_ARGS="-DskipTests=false -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V -T 2.0C"
+    # docker
     - BUILD_DOCKER=true
+    - DOCKER_USER=dockergum
+    - secure: "OmZCQ7botr7R/vI/Z0Zjb/7Cn9ohAIHmygD+nhpdALZWA6bRJo8qQEyeZt8E7NF6NGQXa8XZYGrqCezGayDKXGKTbNggPWbG8wL8lLK3wqwAhMskmaecXBQvhC4I17YZ+nC9DvWSUD7r9IYvpM5aN0f7SX76SDnJZ2k7JNbdoyVBhO4BijaGrkeIzDlxC1PUisNobltKlpCjXliWCQ55RfDy0oipJz2sJ88UYIf5DwIyHoJCIzBWcya+UN0BgjiWASSVDUDGEgNXDe5qxm25FH6JLQh/tz5nMjnSjGl4E/u3QT3vBXcH+dOOzxgbOfGNJMSaKH0kTvw4vbEzXlWguK0GZdpXhOuRRi7+J/znfX9TjZPzsYjEH4B92C13CLmj7DxukckkdLk45znmpx9tnf8RhWqgPcxTL0tfnXMD/VHDaXC0J788vbQ/jsmV5ZW14xqJYpLhWLTisxR3SfhbAVW+re1wi4LPz6XZuABs2Qng0wN+6FZN9ZW7hrRyRUxVi8IlXqJqS3BL9D6DnJvQrEiIbAyNBTufUEu7HSZhWgQcsOIWtxosE6Fq1sMNhd/4JAKCMLhLjsLDkKhX9MNIwcaH9UbqiEgJbIcu2puxRneuhlaakpYrjszpWycSJOgmQnCrcgaoTOThIvAhsUBGZpSQDyogr2NEKNS0EbIi1kY=" # DOCKER_PASS
 
 before_install:
   - chmod +x mvnw
@@ -20,12 +27,17 @@ before_install:
 install: skip
 
 script:
-  - ./mvnw clean install $MAVEN_BUILD_ARGS
-  - |
-    if [ "$BUILD_DOCKER" = "true" ]; then
-      echo "Build docker..."
-    fi
+  - echo "------------------- jdk -----------------------"
+  - echo $TRAVIS_JDK_VERSION
+  - ./mvnw clean install spring-boot:repackage $MAVEN_BUILD_ARGS
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
+  - |
+    if [ "$BUILD_DOCKER" = "true" ] && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] ; then
+      docker login -u $DOCKER_USER -p $DOCKER_PASS
+      export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
+      export IMAGE_NAME=$DOCKER_USER/travis-demo
+      docker build -t $IMAGE_NAME:${TRAVIS_COMMIT::6} .
+      docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
+      docker push $IMAGE_NAME
+    fi
