@@ -21,6 +21,10 @@ env:
     - DOCKER_USER=dockergum
     - secure: "OmZCQ7botr7R/vI/Z0Zjb/7Cn9ohAIHmygD+nhpdALZWA6bRJo8qQEyeZt8E7NF6NGQXa8XZYGrqCezGayDKXGKTbNggPWbG8wL8lLK3wqwAhMskmaecXBQvhC4I17YZ+nC9DvWSUD7r9IYvpM5aN0f7SX76SDnJZ2k7JNbdoyVBhO4BijaGrkeIzDlxC1PUisNobltKlpCjXliWCQ55RfDy0oipJz2sJ88UYIf5DwIyHoJCIzBWcya+UN0BgjiWASSVDUDGEgNXDe5qxm25FH6JLQh/tz5nMjnSjGl4E/u3QT3vBXcH+dOOzxgbOfGNJMSaKH0kTvw4vbEzXlWguK0GZdpXhOuRRi7+J/znfX9TjZPzsYjEH4B92C13CLmj7DxukckkdLk45znmpx9tnf8RhWqgPcxTL0tfnXMD/VHDaXC0J788vbQ/jsmV5ZW14xqJYpLhWLTisxR3SfhbAVW+re1wi4LPz6XZuABs2Qng0wN+6FZN9ZW7hrRyRUxVi8IlXqJqS3BL9D6DnJvQrEiIbAyNBTufUEu7HSZhWgQcsOIWtxosE6Fq1sMNhd/4JAKCMLhLjsLDkKhX9MNIwcaH9UbqiEgJbIcu2puxRneuhlaakpYrjszpWycSJOgmQnCrcgaoTOThIvAhsUBGZpSQDyogr2NEKNS0EbIi1kY=" # DOCKER_PASS
 
+cache:
+  directories:
+    - $HOME/.m2/repository
+
 before_install:
   - chmod +x mvnw
 
