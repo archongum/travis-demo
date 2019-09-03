@@ -35,7 +35,7 @@ after_success:
   - |
     if [ "$BUILD_DOCKER" = "true" ] && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] ; then
       docker login -u $DOCKER_USER -p $DOCKER_PASS
-      export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
+      export TAG=`if [ "$TRAVIS_BRANCH" = "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
       export IMAGE_NAME=$DOCKER_USER/travis-demo
       docker build -t $IMAGE_NAME:${TRAVIS_COMMIT::6} .
       docker tag $IMAGE_NAME:$COMMIT $IMAGE_NAME:$TAG
