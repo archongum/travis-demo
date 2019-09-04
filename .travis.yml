@@ -36,7 +36,7 @@ before_install:
 install: skip
 
 script:
-  - ./mvnw clean install spring-boot:repackage $MAVEN_BUILD_ARGS
+  - ./mvnw clean install $MAVEN_BUILD_ARGS
 
 after_success:
   - |
