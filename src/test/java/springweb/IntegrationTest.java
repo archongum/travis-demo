@@ -18,23 +18,40 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 /**
  * @author Archon  2019/8/28
- * @since
+ * @since 0.1
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class TestIntegration {
+public class IntegrationTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
     @Test
-    public void testGetCar() {
+    public void cars_name_hasCar() {
         ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars/prius", BaseResponse.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody().getCode()).isEqualTo(200);
+        assertThat(response.getBody().getStatus()).isEqualTo(200);
         HashMap map = (HashMap) response.getBody().getData();
         assertThat(map.get("name")).isEqualTo("prius");
         assertThat(map.get("type")).isEqualTo("hybrid");
+    }
+
+    @Test
+    public void cars_name_noFound() {
+        ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars/a", BaseResponse.class);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().getStatus()).isEqualTo(404);
+        assertThat(response.getBody().getData()).isEqualTo("Car Not Found");
+    }
+
+    @Test
+    public void cars() {
+        ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars", BaseResponse.class);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody().getStatus()).isEqualTo(200);
     }
 }

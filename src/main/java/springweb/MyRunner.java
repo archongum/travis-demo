@@ -9,6 +9,10 @@ import springweb.service.CarRepository;
 import javax.transaction.Transactional;
 
 
+/**
+ * @author Archon  2019/8/28
+ * @since 0.1
+ */
 @Component
 public class MyRunner implements CommandLineRunner {
 

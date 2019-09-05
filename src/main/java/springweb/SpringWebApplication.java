@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Archon  2019/8/28
- * @since
+ * @since 0.1
  */
 @SpringBootApplication
 public class SpringWebApplication {

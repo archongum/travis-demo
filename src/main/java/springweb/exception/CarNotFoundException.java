@@ -2,11 +2,11 @@ package springweb.exception;
 
 /**
  * @author Archon  2019/8/28
- * @since
+ * @since 0.1
  */
 public final class CarNotFoundException extends Exception {
 
     public CarNotFoundException() {
-        super("Car not found");
+        super("Car Not Found");
     }
 }

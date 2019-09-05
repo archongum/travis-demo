@@ -1,60 +1,46 @@
 package springweb.domain;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+
 /**
  * @author Archon  2019/9/2
- * @since
+ * @since 0.1
  */
 public class BaseResponse<T> {
 
-    public static <T> BaseResponse<T> newInstance(Code code, T data) {
-        return new BaseResponse<>(code.getCode(), data);
-    }
-
-    private int code;
+    private int status = 200;
 
     private T data;
 
     public BaseResponse() {}
 
-    private BaseResponse(int code, T data) {
-        this.code = code;
+    public BaseResponse(int status, T data) {
+        this.status = status;
         this.data = data;
     }
 
-    public int getCode() {
-        return code;
+    public Map<String, Object> toMap() {
+        Map<String, Object> rs = new LinkedHashMap<>(2);
+        rs.put("status", status);
+        rs.put("data", data);
+        return rs;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public int getStatus() {
+        return status;
     }
 
-    public Object getData() {
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public T getData() {
         return data;
     }
 
     public void setData(T data) {
         this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "BaseResponse{" + "code=" + code + ", data=" + data + '}';
-    }
-
-    public static enum Code {
-        OK(200),
-        NO_FOUND(404),
-        SERVER_ERROR(500);
-
-        private int code;
-
-        Code(int code) {
-            this.code = code;
-        }
-
-        public int getCode() {
-            return code;
-        }
     }
 }

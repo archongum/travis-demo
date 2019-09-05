@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  * @author Archon  2019/8/28
- * @since
+ * @since 0.1
  */
 @Entity
 public class Car {
@@ -43,11 +43,6 @@ public class Car {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" + "id=" + id + ", name='" + name + '\'' + ", type='" + type + '\'' + '}';
     }
 
     @Override

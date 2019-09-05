@@ -7,12 +7,14 @@ import springweb.domain.Car;
 import springweb.exception.CarNotFoundException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 
 /**
  * @author Archon  2019/8/28
- * @since
+ * @since 0.1
  */
 @Service
 public class CarService {
@@ -26,7 +28,8 @@ public class CarService {
 
     public List<Car> getAllCars() throws CarNotFoundException {
         List<Car> rs = new ArrayList<>();
-        carRepository.findAll().iterator().forEachRemaining(rs::add);
+        Optional.ofNullable(carRepository.findAll()).orElse(Collections.emptyList())
+            .iterator().forEachRemaining(rs::add);
         if (rs.isEmpty()) {
             throw new CarNotFoundException();
         }

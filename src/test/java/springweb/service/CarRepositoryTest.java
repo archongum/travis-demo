@@ -11,9 +11,13 @@ import springweb.domain.Car;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
+/**
+ * @author Archon  2019/8/28
+ * @since 0.1
+ */
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class TestCarRepository {
+public class CarRepositoryTest {
 
     @Autowired
     private CarRepository carRepository;
@@ -22,7 +26,7 @@ public class TestCarRepository {
     private TestEntityManager testEntityManager;
 
     @Test
-    public void testFindByName() {
+    public void findByName() {
         Car savedCar = testEntityManager.persistAndFlush(new Car("prius", "hybrid"));
 
         Car car = carRepository.findByName("prius");
