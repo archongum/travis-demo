@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import springweb.domain.BaseResponse;
+import springweb.domain.BaseResponse.BaseStatus;
 
 import java.util.HashMap;
 
@@ -32,7 +33,7 @@ public class IntegrationTest {
         ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars/prius", BaseResponse.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody().getStatus()).isEqualTo(200);
+        assertThat(response.getBody().getStatus()).isEqualTo(BaseStatus.OK);
         HashMap map = (HashMap) response.getBody().getData();
         assertThat(map.get("name")).isEqualTo("prius");
         assertThat(map.get("type")).isEqualTo("hybrid");
@@ -43,7 +44,7 @@ public class IntegrationTest {
         ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars/a", BaseResponse.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().getStatus()).isEqualTo(404);
+        assertThat(response.getBody().getStatus()).isEqualTo(BaseStatus.NOT_FOUND);
         assertThat(response.getBody().getData()).isEqualTo("Car Not Found");
     }
 
@@ -52,6 +53,6 @@ public class IntegrationTest {
         ResponseEntity<BaseResponse> response = restTemplate.getForEntity("/cars", BaseResponse.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody().getStatus()).isEqualTo(200);
+        assertThat(response.getBody().getStatus()).isEqualTo(BaseStatus.OK);
     }
 }

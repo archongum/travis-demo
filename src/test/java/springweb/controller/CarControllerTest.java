@@ -8,6 +8,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import springweb.domain.BaseResponse.BaseStatus;
 import springweb.domain.Car;
 import springweb.exception.CarNotFoundException;
 import springweb.service.CarService;
@@ -40,7 +41,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
                .andExpect(status().isOk())
-               .andExpect(jsonPath("$.status").value(200))
+               .andExpect(jsonPath("$.status").value(BaseStatus.OK.name()))
                .andExpect(jsonPath("$.data.name").value("prius"))
                .andExpect(jsonPath("$.data.type").value("hybrid"));
     }
@@ -51,7 +52,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
                .andExpect(status().isNotFound())
-               .andExpect(jsonPath("$.status").value(404))
+               .andExpect(jsonPath("$.status").value(BaseStatus.NOT_FOUND.name()))
                .andExpect(jsonPath("$.data").value("Car Not Found"));
     }
 
@@ -61,7 +62,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
             .andExpect(status().isInternalServerError())
-            .andExpect(jsonPath("$.status").value(500))
+            .andExpect(jsonPath("$.status").value(BaseStatus.INTERNAL_SERVER_ERROR.name()))
             .andExpect(jsonPath("$.data").value("Unknown Exception"));
     }
 
@@ -72,7 +73,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars"))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.status").value(200))
+            .andExpect(jsonPath("$.status").value(BaseStatus.OK.name()))
             .andExpect(jsonPath("$.data[0].name").value("prius"))
             .andExpect(jsonPath("$.data[0].type").value("hybrid"));
     }
@@ -83,7 +84,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars"))
             .andExpect(status().isNotFound())
-            .andExpect(jsonPath("$.status").value(404))
+            .andExpect(jsonPath("$.status").value(BaseStatus.NOT_FOUND.name()))
             .andExpect(jsonPath("$.data").value("Car Not Found"));
     }
 
@@ -93,7 +94,7 @@ public class CarControllerTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars"))
             .andExpect(status().isInternalServerError())
-            .andExpect(jsonPath("status").value(500))
+            .andExpect(jsonPath("status").value(BaseStatus.INTERNAL_SERVER_ERROR.name()))
             .andExpect(jsonPath("data").value("Unknown Exception"));
     }
 }

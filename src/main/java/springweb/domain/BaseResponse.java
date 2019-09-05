@@ -1,7 +1,6 @@
 package springweb.domain;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.Objects;
 
 
 /**
@@ -10,29 +9,22 @@ import java.util.Map;
  */
 public class BaseResponse<T> {
 
-    private int status = 200;
+    private BaseStatus status = BaseStatus.OK;
 
     private T data;
 
     public BaseResponse() {}
 
-    public BaseResponse(int status, T data) {
+    public BaseResponse(BaseStatus status, T data) {
         this.status = status;
         this.data = data;
     }
 
-    public Map<String, Object> toMap() {
-        Map<String, Object> rs = new LinkedHashMap<>(2);
-        rs.put("status", status);
-        rs.put("data", data);
-        return rs;
-    }
-
-    public int getStatus() {
+    public BaseStatus getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(BaseStatus status) {
         this.status = status;
     }
 
@@ -42,5 +34,28 @@ public class BaseResponse<T> {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BaseResponse<?> that = (BaseResponse<?>) o;
+        return status == that.status && Objects.equals(data, that.data);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(status, data);
+    }
+
+    public enum BaseStatus {
+        OK,
+        NOT_FOUND,
+        INTERNAL_SERVER_ERROR
     }
 }

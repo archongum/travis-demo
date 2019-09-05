@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import springweb.domain.BaseResponse;
-import springweb.domain.Car;
 import springweb.exception.CarNotFoundException;
 import springweb.service.CarService;
-
-import java.util.List;
+import springweb.util.BaseResponses;
 
 
 /**
@@ -26,24 +24,24 @@ public class CarController {
     private CarService carService;
 
     @GetMapping("/cars/{name}")
-    private Car getCar(@PathVariable String name) throws CarNotFoundException {
-        return carService.getCarDetails(name);
+    private BaseResponse getCar(@PathVariable String name) throws CarNotFoundException {
+        return BaseResponses.ok(carService.getCarDetails(name));
     }
 
     @GetMapping("/cars")
-    private List<Car> getAllCars() throws CarNotFoundException {
-        return carService.getAllCars();
+    private BaseResponse getAllCars() throws CarNotFoundException {
+        return BaseResponses.ok(carService.getAllCars());
     }
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.NOT_FOUND)
     private BaseResponse carNotFoundHandler(CarNotFoundException e) {
-        return new BaseResponse<>(404, e.getMessage());
+        return BaseResponses.notFound(e.getMessage());
     }
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     private BaseResponse unknownException(Exception e) {
-        return new BaseResponse<>(500, e.getMessage());
+        return BaseResponses.internalServerError(e.getMessage());
     }
 }

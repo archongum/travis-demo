@@ -1,9 +1,7 @@
 package springweb.domain;
 
 import org.junit.Test;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+import springweb.domain.BaseResponse.BaseStatus;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,18 +13,26 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BaseResponseTest {
 
     @Test
-    public void baseResponse() {
-        BaseResponse br = new BaseResponse<>(500, "server error");
-        assertThat(br.getStatus()).isEqualTo(500);
-        assertThat(br.getData()).isEqualTo("server error");
+    public void equals() {
+        BaseResponse b1 = new BaseResponse<>(BaseStatus.OK, new Car("name", "type"));
+        BaseResponse b2 = new BaseResponse<>();
+        b1.setStatus(BaseStatus.OK);
+        b2.setData(new Car("name", "type"));
+        assertThat(b1).isEqualTo(b2);
     }
 
     @Test
-    public void toMap() {
-        Map<String, Object> actually = new BaseResponse<>(500, "server error").toMap();
-        Map<String, Object> expected = new LinkedHashMap<>(2);
-        expected.put("status", 500);
-        expected.put("data", "server error");
-        assertThat(actually).isEqualTo(expected);
+    public void notEquals() {
+        BaseResponse b1 = new BaseResponse<>(BaseStatus.OK, new Car("name", "type"));
+        BaseResponse b2 = new BaseResponse<>(BaseStatus.NOT_FOUND, new Car("name", "type"));
+        BaseResponse b3 = new BaseResponse<>(BaseStatus.OK, new Car("name2", "type"));
+        BaseResponse b4 = new BaseResponse<>(BaseStatus.OK, "car");
+        BaseResponse b5 = new BaseResponse<>(BaseStatus.OK, null);
+        assertThat(b1).isNotEqualTo(b2)
+                      .isNotEqualTo(b3)
+                      .isNotEqualTo(b4)
+                      .isNotEqualTo(b5)
+                      .isNotEqualTo(null)
+                      .isNotEqualTo("BaseResponse");
     }
 }
