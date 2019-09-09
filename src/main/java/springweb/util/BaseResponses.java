@@ -5,6 +5,8 @@ import springweb.domain.BaseResponse.BaseStatus;
 
 
 /**
+ * BaseResponses.
+ *
  * @author Archon  2019/9/5
  * @since
  */

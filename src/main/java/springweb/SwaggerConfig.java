@@ -10,6 +10,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 /**
+ * SwaggerConfig.
+ *
  * @author Archon  2019/8/28
  * @since 0.1
  */

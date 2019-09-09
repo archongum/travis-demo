@@ -4,6 +4,8 @@ import java.util.Objects;
 
 
 /**
+ * BaseResponse.
+ *
  * @author Archon  2019/9/2
  * @since 0.1
  */
@@ -13,7 +15,8 @@ public class BaseResponse<T> {
 
     private T data;
 
-    public BaseResponse() {}
+    public BaseResponse() {
+    }
 
     public BaseResponse(BaseStatus status, T data) {
         this.status = status;

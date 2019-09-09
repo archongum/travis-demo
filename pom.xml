@@ -10,10 +10,10 @@
 
     <properties>
         <!-- Common -->
+        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <java.version>1.8</java.version>
 
         <!-- Spring -->
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
@@ -21,6 +21,10 @@
 
         <!-- Code Coverage  -->
         <maven-jacoco-plugin.version>0.8.4</maven-jacoco-plugin.version>
+
+        <!-- maven checkstyle -->
+        <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
+        <puppycrawl-checkstyle.version>8.24</puppycrawl-checkstyle.version>
     </properties>
 
     <dependencies>
@@ -111,6 +115,33 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- maven checkstyle -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>${puppycrawl-checkstyle.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>checkstyle</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                    <linkXRef>false</linkXRef>
+                </configuration>
             </plugin>
         </plugins>
 

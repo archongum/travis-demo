@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 /**
+ * SpringWebApplication.
+ *
  * @author Archon  2019/8/28
  * @since 0.1
  */

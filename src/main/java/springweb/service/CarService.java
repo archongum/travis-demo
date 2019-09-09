@@ -13,6 +13,8 @@ import java.util.Optional;
 
 
 /**
+ * CarService.
+ *
  * @author Archon  2019/8/28
  * @since 0.1
  */
@@ -26,6 +28,12 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
+    /**
+     * Get all cars.
+     *
+     * @return all cars
+     * @throws CarNotFoundException
+     */
     public List<Car> getAllCars() throws CarNotFoundException {
         List<Car> rs = new ArrayList<>();
         Optional.ofNullable(carRepository.findAll()).orElse(Collections.emptyList())

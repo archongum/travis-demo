@@ -8,8 +8,20 @@
 
 ---
 
-1. Travis quick start for jdk
-2. Build/Push Docker images using Travis
-3. Deploy Java Web Application to Heroku using Travis
-4. Generate Code Coverage using JaCoCo
-5. Upload JaCoCo Reports to `codecov`
+1. [Travis][1] quick start for jdk
+2. Build/Push [Docker][2] images using Travis
+3. Deploy Java Web Application to [Heroku][3] using Travis
+4. Generate Code Coverage using [JaCoCo][4]
+5. Upload JaCoCo Reports to [codecov][5]
+6. [SpringFox Swagger2][6]: API documentation for API's built with Spring
+7. [Maven Checkstyle][7] and [puppycrawl checksytle][8]
+
+
+[1]: https://travis-ci.com/
+[2]: https://hub.docker.com/r/dockergum/travis-demo
+[3]: https://www.heroku.com/
+[4]: https://www.eclemma.org/jacoco/
+[5]: https://codecov.io/
+[6]: http://springfox.github.io/springfox/
+[7]: https://maven.apache.org/plugins/maven-checkstyle-plugin/
+[8]: https://github.com/checkstyle/checkstyle

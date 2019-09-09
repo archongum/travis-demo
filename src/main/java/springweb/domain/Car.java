@@ -7,6 +7,8 @@ import java.util.Objects;
 
 
 /**
+ * Car.
+ *
  * @author Archon  2019/8/28
  * @since 0.1
  */

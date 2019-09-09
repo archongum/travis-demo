@@ -17,7 +17,7 @@ env:
     # Common
     - APP_NAME=travis-demo
     # Maven
-    - MAVEN_BUILD_ARGS="-DskipTests=false -Dmaven.javadoc.skip=true -Dcheckstyle.skip=true -B -V -T 2.0C"
+    - MAVEN_BUILD_ARGS="-DskipTests=false -Dmaven.javadoc.skip=true -Dcheckstyle.skip=false -B -V -T 2.0C"
     # Docker
     - BUILD_DOCKER=true
     - DOCKER_USER=dockergum
