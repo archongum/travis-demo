@@ -16,6 +16,7 @@ env:
   global:
     # Common
     - APP_NAME=travis-demo
+    - MY_REPO_SLUG=archongum/travis-demo
     # Maven
     - MAVEN_BUILD_ARGS="-DskipTests=false -Dmaven.javadoc.skip=true -Dcheckstyle.skip=false -B -V -T 2.0C"
     # Docker
@@ -42,7 +43,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - |
-    if [ "$BUILD_DOCKER" = "true" ] && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] ; then
+    if [ "$BUILD_DOCKER" = "true" ] && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] && [ "$TRAVIS_REPO_SLUG" = "$MY_REPO_SLUG" ] ; then
       docker login -u $DOCKER_USER -p $DOCKER_PASS
       export TAG=`if [ "$TRAVIS_BRANCH" = "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
       export IMAGE_NAME=$DOCKER_USER/$APP_NAME
@@ -56,6 +57,8 @@ deploy:
   api_key: $HEROKU_API_KEY
   app: $HEROKU_APP_NAME
   on:
-    condition: $DEPLOY_HEROKU = true # space needed
+    condition: 
+      - $DEPLOY_HEROKU = true # space needed
+      - $TRAVIS_REPO_SLUG = $MY_REPO_SLUG
     branch: master
     jdk: openjdk8
