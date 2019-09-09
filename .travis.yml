@@ -43,7 +43,11 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - |
-    if [ "$BUILD_DOCKER" = "true" ] && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] && [ "$TRAVIS_REPO_SLUG" = "$MY_REPO_SLUG" ] ; then
+    if [ "$BUILD_DOCKER" = "true" ] \
+        && [ "$TRAVIS_JDK_VERSION" = "openjdk8" ] \
+        && [ "$TRAVIS_REPO_SLUG" = "$MY_REPO_SLUG" ] \
+        && [ "$TRAVIS_PULL_REQUEST" = "false" ] ;
+    then
       docker login -u $DOCKER_USER -p $DOCKER_PASS
       export TAG=`if [ "$TRAVIS_BRANCH" = "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
       export IMAGE_NAME=$DOCKER_USER/$APP_NAME
@@ -57,8 +61,8 @@ deploy:
   api_key: $HEROKU_API_KEY
   app: $HEROKU_APP_NAME
   on:
-    condition: 
-      - $DEPLOY_HEROKU = true # space needed
-      - $TRAVIS_REPO_SLUG = $MY_REPO_SLUG
+    # Note that pull request builds skip the deployment step altogether.
+    condition: $DEPLOY_HEROKU = true # space needed
     branch: master
     jdk: openjdk8
+    repo: $MY_REPO_SLUG
