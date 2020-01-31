@@ -25,7 +25,7 @@
 
         <!-- maven checkstyle -->
         <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
-        <puppycrawl-checkstyle.version>8.24</puppycrawl-checkstyle.version>
+        <puppycrawl-checkstyle.version>8.29</puppycrawl-checkstyle.version>
     </properties>
 
     <dependencies>
