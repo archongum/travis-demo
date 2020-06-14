@@ -22,8 +22,12 @@ import springweb.util.BaseResponses;
 @RestController
 public class CarController {
 
+    private final CarService carService;
+
     @Autowired
-    private CarService carService;
+    public CarController(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping("/cars/{name}")
     private BaseResponse getCar(@PathVariable String name) throws CarNotFoundException {

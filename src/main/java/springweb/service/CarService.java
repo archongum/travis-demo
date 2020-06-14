@@ -21,9 +21,9 @@ import java.util.Optional;
 @Service
 public class CarService {
 
-    @Autowired
-    private CarRepository carRepository;
+    private final CarRepository carRepository;
 
+    @Autowired
     public CarService(CarRepository carRepository) {
         this.carRepository = carRepository;
     }

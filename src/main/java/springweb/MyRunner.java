@@ -18,8 +18,12 @@ import javax.transaction.Transactional;
 @Component
 public class MyRunner implements CommandLineRunner {
 
+    private final CarRepository carRepository;
+
     @Autowired
-    private CarRepository carRepository;
+    public MyRunner(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
 
     @Override
     @Transactional
