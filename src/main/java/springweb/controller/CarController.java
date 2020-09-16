@@ -36,7 +36,7 @@ public class CarController {
     }
 
     @PostMapping("/matrix")
-    private Object matrix(@RequestBody Object request) {
+    private Object matrix(@RequestBody(required = false) Object request) {
         return "{\n" + "    \"code\": 0,\n" + "    \"success\": true,\n" + "    \"message\": \"success\",\n" + "    \"data\": {\n"
             + "        \"meta\": {\n" + "            \"version\": \"1\",\n" + "            \"datasourceId\": 123,\n"
             + "            \"datasetType\": \"list\",\n" + "            \"measures\": [],\n" + "            \"parameters\": [\n"
