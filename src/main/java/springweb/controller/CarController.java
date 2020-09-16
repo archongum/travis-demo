@@ -38,7 +38,7 @@ public class CarController {
     @PostMapping("/matrix")
     private Object matrix(@RequestBody Object request) {
         return "{\n" + "    \"code\": 0,\n" + "    \"success\": true,\n" + "    \"message\": \"success\",\n" + "    \"data\": {\n"
-            + "        \"meta\": {\n" + "            \"version\": null,\n" + "            \"datasourceId\": null,\n"
+            + "        \"meta\": {\n" + "            \"version\": \"1\",\n" + "            \"datasourceId\": 123,\n"
             + "            \"datasetType\": \"list\",\n" + "            \"measures\": [],\n" + "            \"parameters\": [\n"
             + "                {\n" + "                    \"schemeField\": \"customer_id\",\n" + "                    \"apiParam\": \"企业id\"\n"
             + "                }\n" + "            ],\n" + "            \"fieldsInfo\": [\n" + "                {\n"
