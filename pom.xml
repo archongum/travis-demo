@@ -9,7 +9,7 @@
     <version>0.1</version>
 
     <properties>
-        <!-- test-PR -->
+        <!-- test-RP-from-alexgum123 resolved -->
         <!-- Common -->
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
