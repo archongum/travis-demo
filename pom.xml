@@ -18,6 +18,7 @@
         <!-- Spring -->
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <h2.version>1.4.199</h2.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 
         <!-- Code Coverage  -->
         <maven-jacoco-plugin.version>0.8.4</maven-jacoco-plugin.version>
@@ -43,16 +44,19 @@
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
         </dependency>
+        <!-- SpringFox Swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <version>${springfox-swagger2.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
+            <version>${springfox-swagger2.version}</version>
         </dependency>
+
+        <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
