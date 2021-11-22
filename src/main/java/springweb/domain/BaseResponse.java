@@ -56,9 +56,10 @@ public class BaseResponse<T> {
         return Objects.hash(status, data);
     }
 
+    /**
+     * BaseStatus.
+     */
     public enum BaseStatus {
-        OK,
-        NOT_FOUND,
-        INTERNAL_SERVER_ERROR
+        OK, NOT_FOUND, INTERNAL_SERVER_ERROR
     }
 }

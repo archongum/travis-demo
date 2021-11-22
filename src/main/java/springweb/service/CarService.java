@@ -1,15 +1,15 @@
 package springweb.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.stereotype.Service;
-import springweb.domain.Car;
-import springweb.exception.CarNotFoundException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+import springweb.domain.Car;
+import springweb.exception.CarNotFoundException;
 
 
 /**
@@ -19,33 +19,38 @@ import java.util.Optional;
  * @since 0.1
  */
 @Service
+@AllArgsConstructor
+@Slf4j
 public class CarService {
 
     private final CarRepository carRepository;
-
-    @Autowired
-    public CarService(CarRepository carRepository) {
-        this.carRepository = carRepository;
-    }
 
     /**
      * Get all cars.
      *
      * @return all cars
-     * @throws CarNotFoundException
+     * @throws CarNotFoundException car not found
      */
     public List<Car> getAllCars() throws CarNotFoundException {
+        log.warn("getAllCars");
         List<Car> rs = new ArrayList<>();
-        Optional.ofNullable(carRepository.findAll()).orElse(Collections.emptyList())
-            .iterator().forEachRemaining(rs::add);
+        Optional.ofNullable(carRepository.findAll()).orElse(Collections.emptyList()).iterator().forEachRemaining(rs::add);
         if (rs.isEmpty()) {
             throw new CarNotFoundException();
         }
         return rs;
     }
 
+    /**
+     * get car details
+     *
+     * @param name car name
+     * @return Car
+     * @throws CarNotFoundException car not found
+     */
     @Cacheable("cars")
     public Car getCarDetails(String name) throws CarNotFoundException {
+        log.warn("getCarDetails, name: {}", name);
         Car car = carRepository.findByName(name);
         if (car == null) {
             throw new CarNotFoundException();

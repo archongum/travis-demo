@@ -24,8 +24,11 @@
         <maven-jacoco-plugin.version>0.8.4</maven-jacoco-plugin.version>
 
         <!-- maven checkstyle -->
-        <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
-        <puppycrawl-checkstyle.version>8.29</puppycrawl-checkstyle.version>
+        <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+        <puppycrawl-checkstyle.version>9.1</puppycrawl-checkstyle.version>
+
+        <!-- skywalking -->
+        <skywalking.version>8.8.0</skywalking.version>
     </properties>
 
     <dependencies>
@@ -54,6 +57,25 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <!-- skywalking -->
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-logback-1.x</artifactId>
+            <version>${skywalking.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.skywalking</groupId>
+            <artifactId>apm-toolkit-trace</artifactId>
+            <version>${skywalking.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <!-- Test -->
@@ -137,6 +159,7 @@
                     <execution>
                         <id>checkstyle</id>
                         <phase>validate</phase>
+                        <!-- add checkstyle:check to validate lifecycle -->
                         <goals>
                             <goal>check</goal>
                         </goals>
@@ -144,7 +167,7 @@
                 </executions>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
-                    <linkXRef>false</linkXRef>
+                    <consoleOutput>true</consoleOutput>
                 </configuration>
             </plugin>
         </plugins>

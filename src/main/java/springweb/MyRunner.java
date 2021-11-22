@@ -1,12 +1,11 @@
 package springweb;
 
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import springweb.domain.Car;
 import springweb.service.CarRepository;
-
-import javax.transaction.Transactional;
 
 
 /**

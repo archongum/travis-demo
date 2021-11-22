@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hot config -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <!-- Spring property -->
+    <!--<springProperty name="root.level" source="logging.root.level"/>-->
+
+    <!-- Level -->
+    <property name="root.level" value="INFO"/>
+
+    <!-- CONST: Logs dir -->
+    <property name="logs.dir" value="logs"/>
+    <property name="logs.history.dir" value="${logs.dir}/%d{yyyy-MM-dd}"/>
+
+    <!-- CONST: Appender name -->
+    <property name="logs.all.appender" value="ALL_LOGS"/>
+    <property name="logs.error.appender" value="ERROR_LOGS"/>
+
+    <!-- CONST: Logs filename -->
+    <property name="logs.all.filename" value="all.log"/>
+    <property name="logs.error.filename" value="error.log"/>
+    <property name="logs.all.rolling.filename" value="all.%d{yyyy-MM-dd}.%i.gz"/>
+    <property name="logs.error.rolling.filename" value="error.%d{yyyy-MM-dd}.%i.gz"/>
+
+    <!-- CONST: Logs pattern -->
+    <property name="logs.charset" value="UTF-8"/>
+    <property name="logs.file.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%.50thread] %-5level %.100logger - [%file:%line] - %msg%n"/>
+    <property name="logs.stdout.pattern" value="%red(%d{yyyy-MM-dd HH:mm:ss.SSS}) %green([%.50thread]) %highlight(%-5level) %magenta(%.100logger) - %yellow([%file:%line]) - %cyan(%msg%n)"/>
+
+    <!-- CONST: History config -->
+    <property name="logs.history.max_history" value="7"/>
+    <property name="logs.history.max_file_size" value="100MB"/>
+    <property name="logs.history.total_size_cap" value="1000MB"/>
+
+    <!-- Application config -->
+    <!--
+    <property name="logs.app1.appender" value="APP1_LOGS"/>
+    <property name="logs.app1.filename" value="app1.log"/>
+    <property name="logs.app1.level" value="DEBUG"/>
+    <property name="logs.app1.package" value="log.LogMain"/>
+    -->
+
+    <!-- CONST: Application logs -->
+    <!--
+    <appender name="${logs.app1.appender}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logs.dir}/${logs.app1.filename}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logs.history.dir}/${logs.app1.filename}.%i.gz</fileNamePattern>
+            <maxFileSize>${logs.history.max_file_size}</maxFileSize>
+            <maxHistory>${logs.history.max_history}</maxHistory>
+            <totalSizeCap>${logs.history.total_size_cap}</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>${logs.charset}</charset>
+            <pattern>${logs.file.pattern}</pattern>
+        </encoder>
+    </appender>
+    -->
+
+
+    <!-- CONST: All logs -->
+    <appender name="${logs.all.appender}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logs.dir}/${logs.all.filename}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logs.history.dir}/${logs.all.rolling.filename}</fileNamePattern>
+            <maxFileSize>${logs.history.max_file_size}</maxFileSize>
+            <maxHistory>${logs.history.max_history}</maxHistory>
+            <totalSizeCap>${logs.history.total_size_cap}</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>${logs.charset}</charset>
+            <pattern>${logs.file.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- CONST: Error -->
+    <appender name="${logs.error.appender}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logs.dir}/${logs.error.filename}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${logs.history.dir}/${logs.error.rolling.filename}</fileNamePattern>
+            <maxFileSize>${logs.history.max_file_size}</maxFileSize>
+            <maxHistory>${logs.history.max_history}</maxHistory>
+            <totalSizeCap>${logs.history.total_size_cap}</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <charset>${logs.charset}</charset>
+            <pattern>${logs.file.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- CONST: System.out -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>${logs.charset}</charset>
+            <pattern>${logs.stdout.pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- CONST: Application 1 -->
+    <!--
+    <logger name="${logs.app1.package}" level="${logs.app1.level}">
+        <appender-ref ref="${logs.app1.appender}"/>
+    </logger>
+    -->
+
+    <!-- skywalking appender -->
+    <appender name="skywalking-appender" class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+        <!-- 日志输出编码 -->
+        <encoder>
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- CONST: root -->
+    <root level="${root.level}">
+        <appender-ref ref="skywalking-appender"/>
+        <appender-ref ref="${logs.all.appender}"/>
+        <appender-ref ref="${logs.error.appender}"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

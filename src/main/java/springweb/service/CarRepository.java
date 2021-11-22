@@ -11,5 +11,6 @@ import springweb.domain.Car;
  * @since 0.1
  */
 public interface CarRepository extends CrudRepository<Car, Long> {
+
     Car findByName(String name);
 }

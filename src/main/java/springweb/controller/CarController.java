@@ -1,6 +1,8 @@
 package springweb.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.skywalking.apm.toolkit.trace.TraceContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,22 +22,23 @@ import springweb.util.BaseResponses;
  * @since 0.1
  */
 @RestController
+@AllArgsConstructor
+@Slf4j
 public class CarController {
 
     private final CarService carService;
 
-    @Autowired
-    public CarController(CarService carService) {
-        this.carService = carService;
-    }
-
     @GetMapping("/cars/{name}")
     private BaseResponse getCar(@PathVariable String name) throws CarNotFoundException {
-        return BaseResponses.ok(carService.getCarDetails(name));
+        log.info("getCar, name: {}", name);
+        // Return trace id in response.
+        String traceId = TraceContext.traceId();
+        return BaseResponses.ok(carService.getCarDetails(name) + ", trace id:" + traceId);
     }
 
     @GetMapping("/cars")
     private BaseResponse getAllCars() throws CarNotFoundException {
+        log.info("getAllCars");
         return BaseResponses.ok(carService.getAllCars());
     }
 
