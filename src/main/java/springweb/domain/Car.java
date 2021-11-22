@@ -4,6 +4,10 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 
 /**
@@ -13,39 +17,22 @@ import javax.persistence.Id;
  * @since 0.1
  */
 @Entity
+@RequiredArgsConstructor
+@NoArgsConstructor
+@Data
 public class Car {
 
     @Id
     @GeneratedValue
     private long id;
 
+    @NonNull
     private String name;
 
+    @NonNull
     private String type;
 
-    public Car() {
-    }
-
-    public Car(String name, String type) {
-        this.name = name;
-        this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
+    private String remark;
 
     @Override
     public boolean equals(Object o) {
@@ -57,10 +44,5 @@ public class Car {
         }
         Car car = (Car) o;
         return Objects.equals(name, car.name) && Objects.equals(type, car.type);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, type);
     }
 }

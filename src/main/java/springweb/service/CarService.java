@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.skywalking.apm.toolkit.trace.TraceContext;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import springweb.domain.Car;
@@ -55,6 +56,8 @@ public class CarService {
         if (car == null) {
             throw new CarNotFoundException();
         }
+        // Return trace id in response.
+        car.setRemark(String.format("span id: %s, segment id: %s, trace id: %s", TraceContext.spanId(), TraceContext.segmentId(), TraceContext.traceId()));
         return car;
     }
 }

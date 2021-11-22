@@ -2,7 +2,6 @@ package springweb.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.skywalking.apm.toolkit.trace.TraceContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,9 +30,7 @@ public class CarController {
     @GetMapping("/cars/{name}")
     private BaseResponse getCar(@PathVariable String name) throws CarNotFoundException {
         log.info("getCar, name: {}", name);
-        // Return trace id in response.
-        String traceId = TraceContext.traceId();
-        return BaseResponses.ok(carService.getCarDetails(name) + ", trace id:" + traceId);
+        return BaseResponses.ok(carService.getCarDetails(name));
     }
 
     @GetMapping("/cars")

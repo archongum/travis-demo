@@ -26,12 +26,10 @@ public class CarTest {
         Car c2 = new Car("prius2", "hybrid");
         Car c3 = new Car("prius", "hybrid2");
         Car c4 = new Car("prius2", "hybrid2");
-        Car c5 = new Car(null, null);
         assertThat(c1)
             .isNotEqualTo(c2)
             .isNotEqualTo(c3)
             .isNotEqualTo(c4)
-            .isNotEqualTo(c5)
             .isNotEqualTo("car")
             .isNotEqualTo(null);
     }
