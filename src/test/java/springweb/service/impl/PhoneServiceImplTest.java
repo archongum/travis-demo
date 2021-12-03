@@ -32,4 +32,11 @@ public class PhoneServiceImplTest {
             .isEqualTo(new Phone("iPhone", "Apple"))
             .isNotEqualTo(new Phone("iPhone", "B"));
     }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void getPhone_PhoneNameExceedMaxLength() {
+        String longName = "1234567";
+        phoneServiceImpl.getPhone(longName);
+    }
 }

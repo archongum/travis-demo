@@ -21,6 +21,10 @@ public class PhoneServiceImpl implements PhoneService {
 
     @Override
     public Phone getPhone(String name) {
+        if (name.length() >= 5) {
+            throw new IllegalArgumentException("Name should not exceed 5, current value: " + name);
+        }
+
         String type = phoneMapper.getPhoneType(name);
         // bad
 //        return new Phone(type, name);

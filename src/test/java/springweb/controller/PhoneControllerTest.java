@@ -34,4 +34,13 @@ public class PhoneControllerTest {
             .andExpect(MockMvcResultMatchers.jsonPath("name").value("iPhone"))
             .andExpect(MockMvcResultMatchers.jsonPath("type").value("Apple"));
     }
+
+    @Test
+    public void getPhone_PhoneNameExceedMaxLength() throws Exception {
+        String longName = "123456789";
+        BDDMockito.given(phoneService.getPhone(longName)).willThrow(new IllegalArgumentException("Name should not greater than 5"));
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/getPhone/" + longName))
+            .andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
 }
