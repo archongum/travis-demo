@@ -1,0 +1,849 @@
+2021-12-03 13:37:54.123 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:37:54.130 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:37:54.131 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:37:54.290 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:37:54.294 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:37:54.314 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47af7f3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c729a55, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3bb9a3ff, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5af3afd9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@323b36e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44ebcd03, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@694abbdc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6356695f]
+2021-12-03 13:37:54.770 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 10368 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:37:54.772 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:37:55.448 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:37:55.454 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:37:55.486 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:37:55.524 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 10368 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:37:55.526 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:37:55.634 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:37:55.635 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:37:55.652 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:37:55.655 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0] to prepare test instance [springweb.controller.PhoneControllerTest@74518890]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:39:18.335 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:39:18.341 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:39:18.343 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:39:18.476 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:39:18.478 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:39:18.493 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47af7f3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c729a55, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3bb9a3ff, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5af3afd9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@323b36e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44ebcd03, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@694abbdc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6356695f]
+2021-12-03 13:39:18.880 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 18668 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:39:18.884 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:39:19.560 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:39:19.565 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:39:19.595 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:39:19.636 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 18668 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:39:19.638 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:39:19.755 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:39:19.756 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:39:19.778 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:39:19.783 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0] to prepare test instance [springweb.controller.PhoneControllerTest@9fecdf1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:39:38.511 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:39:38.518 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:39:38.519 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:39:38.658 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:39:38.662 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:39:38.680 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47af7f3d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c729a55, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3bb9a3ff, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5af3afd9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@323b36e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@44ebcd03, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@694abbdc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6356695f]
+2021-12-03 13:39:39.125 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 1764 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:39:39.127 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:39:39.793 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:39:39.800 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:39:39.831 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:39:39.872 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 1764 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:39:39.873 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:39:39.982 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:39:39.983 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:39:40.001 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:39:40.003 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@661972b0] to prepare test instance [springweb.controller.PhoneControllerTest@30865a90]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:40:34.279 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:40:34.285 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:40:34.285 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:40:34.415 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:40:34.417 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:40:34.433 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c729a55, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3bb9a3ff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@661972b0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@323b36e0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44ebcd03, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@694abbdc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6356695f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f18837a]
+2021-12-03 13:40:34.783 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 800 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:40:34.785 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:40:35.481 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:40:35.487 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:40:35.516 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:40:35.558 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 800 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:40:35.560 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:40:35.690 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:40:35.691 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:40:35.720 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:40:35.723 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9] to prepare test instance [springweb.controller.PhoneControllerTest@589b028e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:41:42.596 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:41:42.603 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:41:42.604 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:41:42.751 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:41:42.754 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:41:42.770 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c729a55, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3bb9a3ff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@661972b0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@323b36e0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44ebcd03, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@694abbdc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6356695f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f18837a]
+2021-12-03 13:41:43.207 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 6008 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:41:43.209 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:41:43.896 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:41:43.900 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:41:43.928 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:41:43.962 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 6008 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:41:43.964 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:41:44.097 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:41:44.098 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:41:44.120 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:41:44.122 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9] to prepare test instance [springweb.controller.PhoneControllerTest@5c84624f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:42:06.385 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:42:06.392 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:42:06.393 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:42:06.550 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:42:06.552 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:42:06.568 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c729a55, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3bb9a3ff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@661972b0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@323b36e0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44ebcd03, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@694abbdc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e005c4b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4567f35d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5ffead27, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6356695f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4f18837a]
+2021-12-03 13:42:06.944 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 13480 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:42:06.947 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:42:08.028 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:42:08.213 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:42:08.214 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:42:08.224 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 10 ms
+2021-12-03 13:42:08.251 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 1.544 seconds (JVM running for 2.416)
+2021-12-03 13:42:08.264 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5af3afd9] to prepare test instance [springweb.controller.PhoneControllerTest@2d84cb86]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'springweb.controller.PhoneControllerTest': Unsatisfied dependency expressed through field 'phoneService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:391)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 28 common frames omitted
+2021-12-03 13:42:08.276 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:43:24.172 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:43:24.179 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:43:24.180 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:43:24.312 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:43:24.314 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:43:24.333 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4567f35d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ffead27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6356695f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f18837a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@359f7cdf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1fa268de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4f6ee6e4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4466af20, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a514af7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6b927fb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3e58a80e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fb61f4a]
+2021-12-03 13:43:24.704 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 13280 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:43:24.706 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:43:25.356 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:43:25.361 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:43:25.386 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:43:25.420 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 13280 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:43:25.421 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:43:25.534 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:43:25.535 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:43:25.552 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:43:25.554 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f18837a] to prepare test instance [springweb.controller.PhoneControllerTest@6594402a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:44:22.470 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:44:22.476 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:44:22.477 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:44:22.614 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:44:22.616 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:44:22.632 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4567f35d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ffead27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6356695f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f18837a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@359f7cdf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1fa268de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4f6ee6e4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4466af20, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a514af7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6b927fb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3e58a80e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fb61f4a]
+2021-12-03 13:44:22.981 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 11088 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:44:22.984 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:44:23.673 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:44:23.678 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:44:23.705 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:44:23.743 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 11088 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:44:23.744 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:44:23.857 [main] WARN  org.springframework.web.context.support.GenericWebApplicationContext - [AbstractApplicationContext.java:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2021-12-03 13:44:23.859 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener - [ConditionEvaluationReportLoggingListener.java:135] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-03 13:44:23.876 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - [LoggingFailureAnalysisReporter.java:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in springweb.controller.PhoneController required a bean of type 'springweb.service.PhoneService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'springweb.service.PhoneService' in your configuration.
+
+2021-12-03 13:44:23.879 [main] ERROR org.springframework.test.context.TestContextManager - [TestContextManager.java:250] - Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f18837a] to prepare test instance [springweb.controller.PhoneControllerTest@6594402a]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phoneController' defined in file [D:\workspace\archongum\travis-demo\target\classes\springweb\controller\PhoneController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'springweb.service.PhoneService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	... 43 common frames omitted
+2021-12-03 13:44:53.912 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:44:53.918 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:44:53.918 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:44:54.059 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:44:54.062 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:44:54.078 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efbca5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b7cc17c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59662a0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fbd92c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67c27493, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a482e36, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72967906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1bd4fdd]
+2021-12-03 13:44:54.452 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 15408 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:44:54.455 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:44:56.117 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:44:56.302 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:44:56.303 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:44:56.314 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 11 ms
+2021-12-03 13:44:56.341 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 2.131 seconds (JVM running for 3.084)
+2021-12-03 13:44:56.442 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:45:15.133 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:45:15.139 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:45:15.140 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:45:15.306 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:45:15.308 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:45:15.324 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efbca5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b7cc17c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59662a0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fbd92c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67c27493, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a482e36, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72967906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1bd4fdd]
+2021-12-03 13:45:15.689 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 2552 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:45:15.692 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:45:17.138 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:45:17.313 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:45:17.314 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:45:17.328 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 14 ms
+2021-12-03 13:45:17.362 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 1.891 seconds (JVM running for 2.811)
+2021-12-03 13:45:17.439 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:19.272 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:46:19.278 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:46:19.278 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:46:19.413 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:46:19.416 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:46:19.433 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efbca5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b7cc17c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59662a0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fbd92c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67c27493, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a482e36, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72967906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1bd4fdd]
+2021-12-03 13:46:19.816 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 18472 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:46:19.818 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:46:21.183 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:21.352 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:46:21.353 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:46:21.363 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 10 ms
+2021-12-03 13:46:21.394 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 1.821 seconds (JVM running for 2.73)
+2021-12-03 13:46:21.543 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:32.232 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:46:32.239 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:46:32.240 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:46:32.376 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:46:32.379 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:46:32.394 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efbca5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b7cc17c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59662a0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fbd92c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67c27493, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a482e36, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72967906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1bd4fdd]
+2021-12-03 13:46:32.784 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 3268 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:46:32.787 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:46:34.148 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:34.315 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:46:34.315 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:46:34.326 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 11 ms
+2021-12-03 13:46:34.359 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 1.816 seconds (JVM running for 2.707)
+2021-12-03 13:46:34.494 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:48.538 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:308] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springweb.controller.PhoneControllerTest], using SpringBootContextLoader
+2021-12-03 13:46:48.543 [main] INFO  org.springframework.test.context.support.AbstractContextLoader - [AbstractContextLoader.java:264] - Could not detect default resource locations for test class [springweb.controller.PhoneControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-12-03 13:46:48.544 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - [AnnotationConfigContextLoaderUtils.java:83] - Could not detect default configuration classes for test class [springweb.controller.PhoneControllerTest]: PhoneControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-12-03 13:46:48.685 [main] INFO  org.springframework.boot.test.context.SpringBootTestContextBootstrapper - [SpringBootTestContextBootstrapper.java:235] - Found @SpringBootConfiguration springweb.SpringWebApplication for test class springweb.controller.PhoneControllerTest
+2021-12-03 13:46:48.689 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:248] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-12-03 13:46:48.705 [main] INFO  org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - [AbstractTestContextBootstrapper.java:177] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4efbca5a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1b7cc17c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@59662a0b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@77fbd92c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@67c27493, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a482e36, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@72967906, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1bd4fdd]
+2021-12-03 13:46:49.086 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:50] - Starting PhoneControllerTest on Archon-S3 with PID 9316 (started by Archon in D:\workspace\archongum\travis-demo)
+2021-12-03 13:46:49.089 [main] INFO  springweb.controller.PhoneControllerTest - [SpringApplication.java:646] - No active profile set, falling back to default profiles: default
+2021-12-03 13:46:50.453 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:171] - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-03 13:46:50.632 [main] INFO  org.springframework.boot.test.mock.web.SpringBootMockServletContext - [MockServletContext.java:444] - Initializing Spring TestDispatcherServlet ''
+2021-12-03 13:46:50.632 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:524] - Initializing Servlet ''
+2021-12-03 13:46:50.644 [main] INFO  org.springframework.test.web.servlet.TestDispatcherServlet - [FrameworkServlet.java:546] - Completed initialization in 11 ms
+2021-12-03 13:46:50.677 [main] INFO  springweb.controller.PhoneControllerTest - [StartupInfoLogger.java:59] - Started PhoneControllerTest in 1.838 seconds (JVM running for 2.727)
+2021-12-03 13:46:50.808 [Thread-2] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - [ExecutorConfigurationSupport.java:208] - Shutting down ExecutorService 'applicationTaskExecutor'
