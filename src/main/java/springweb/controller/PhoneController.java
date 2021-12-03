@@ -22,6 +22,11 @@ public class PhoneController {
 
     @GetMapping("/getPhone/{name}")
     public Phone getPhone(@PathVariable String name) {
+        // bad
+//        Phone phone =  phoneService.getPhone(name);
+//        phone.setType("B");
+//        return phone;
+        // good
         return phoneService.getPhone(name);
     };
 }

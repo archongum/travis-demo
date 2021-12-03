@@ -20,10 +20,10 @@ import springweb.service.PhoneService;
 public class PhoneControllerTest {
 
     @Autowired
-    MockMvc mockMvc;
+    private MockMvc mockMvc;
 
     @MockBean
-    PhoneService phoneService;
+    private PhoneService phoneService;
 
     @Test
     public void getPhone_ShouldReturnPhone() throws Exception {
