@@ -1,6 +1,7 @@
 *.iml
 *.ipr
 *.iws
+logs/
 target/
 /var
 /*/var/
