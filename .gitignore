@@ -25,3 +25,6 @@ benchmark_outputs
 .mvn/timing.properties
 .editorconfig
 node_modules
+logs/
+log/
+*.log
