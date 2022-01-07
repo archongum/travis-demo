@@ -17,7 +17,7 @@
 
         <!-- Spring -->
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
-        <h2.version>2.0.202</h2.version>
+        <h2.version>2.0.206</h2.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
 
         <!-- Code Coverage  -->
