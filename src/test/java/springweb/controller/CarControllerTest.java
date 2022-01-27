@@ -1,20 +1,18 @@
 package springweb.controller;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import java.util.Collections;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import springweb.domain.BaseResponse.BaseStatus;
 import springweb.domain.Car;
 import springweb.exception.CarNotFoundException;
 import springweb.service.CarService;
-
-import java.util.Collections;
-
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -25,9 +23,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author Archon  2019/8/28
  * @since 0.1
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @WebMvcTest(CarController.class)
-public class CarControllerTest {
+class CarControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -36,7 +34,7 @@ public class CarControllerTest {
     private CarService carService;
 
     @Test
-    public void getCar_shouldReturnCar() throws Exception {
+    void getCar_shouldReturnCar() throws Exception {
         given(carService.getCarDetails(anyString())).willReturn(new Car("prius", "hybrid"));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
@@ -47,7 +45,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void getCar_noFound() throws Exception {
+    void getCar_noFound() throws Exception {
         given(carService.getCarDetails(anyString())).willThrow(new CarNotFoundException());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
@@ -57,7 +55,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void getCar_unknownException() throws Exception {
+    void getCar_unknownException() throws Exception {
         given(carService.getCarDetails(anyString())).willThrow(new RuntimeException("Unknown Exception"));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars/prius"))
@@ -67,7 +65,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void getAllCars_shouldReturnCarList() throws Exception {
+    void getAllCars_shouldReturnCarList() throws Exception {
         given(carService.getAllCars()).willReturn(
             Collections.singletonList(new Car("prius", "hybrid")));
 
@@ -79,7 +77,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void getAllCars_noFound() throws Exception {
+    void getAllCars_noFound() throws Exception {
         given(carService.getAllCars()).willThrow(new CarNotFoundException());
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars"))
@@ -89,7 +87,7 @@ public class CarControllerTest {
     }
 
     @Test
-    public void getAllCars_unknownException() throws Exception {
+    void getAllCars_unknownException() throws Exception {
         given(carService.getAllCars()).willThrow(new RuntimeException("Unknown Exception"));
 
         mockMvc.perform(MockMvcRequestBuilders.get("/cars"))

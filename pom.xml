@@ -4,21 +4,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.2</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.github.archongum</groupId>
     <artifactId>travis-demo</artifactId>
     <version>0.1</version>
 
     <properties>
         <!-- Common -->
-        <java.version>1.8</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <java.version>11</java.version>
 
-        <!-- Spring -->
-        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
-        <h2.version>2.0.202</h2.version>
-        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <!-- OpenAPI 3.0 -->
+        <springdoc-openapi.version>1.6.5</springdoc-openapi.version>
+
+        <!-- sentinel -->
+        <sentinel.vesrion>1.8.3</sentinel.vesrion>
 
         <!-- Code Coverage  -->
         <maven-jacoco-plugin.version>0.8.4</maven-jacoco-plugin.version>
@@ -45,18 +50,13 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>${h2.version}</version>
         </dependency>
-        <!-- SpringFox Swagger2 -->
+
+        <!-- OpenAPI 3.0 -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox-swagger2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox-swagger2.version}</version>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-openapi.version}</version>
         </dependency>
 
         <!-- skywalking -->
@@ -70,6 +70,18 @@
             <artifactId>apm-toolkit-trace</artifactId>
             <version>${skywalking.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+            <version>${sentinel.vesrion}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-spring-webmvc-adapter</artifactId>
+            <version>${sentinel.vesrion}</version>
         </dependency>
 
         <!-- lombok -->
@@ -86,25 +98,13 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <build>
         <plugins>
             <!-- Spring -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
+                <version>${parent.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -171,19 +171,5 @@
                 </configuration>
             </plugin>
         </plugins>
-
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven-compiler-plugin.version}</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 </project>

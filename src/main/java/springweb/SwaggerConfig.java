@@ -1,28 +1,30 @@
 package springweb;
 
+import org.springdoc.core.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 /**
  * SwaggerConfig.
- * URL: http://localhost:8080/swagger-ui.html
+ * URL: http://localhost:8080/swagger-ui/index.html
  *
  * @author Archon  2019/8/28
  * @since 0.1
  */
 @Configuration
-@EnableSwagger2
 public class SwaggerConfig {
 
+    /**
+     * GroupedOpenApi
+     *
+     * @return OpenAPI 3.0
+     */
     @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.basePackage("springweb.controller"))
-            .paths(PathSelectors.any()).build();
+    public GroupedOpenApi allApi() {
+        return GroupedOpenApi.builder()
+            .group("all-api")
+            .pathsToMatch("/**")
+            .build();
     }
 }

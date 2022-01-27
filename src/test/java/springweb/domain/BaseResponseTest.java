@@ -1,8 +1,7 @@
 package springweb.domain;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import springweb.domain.BaseResponse.BaseStatus;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -10,10 +9,10 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Archon  2019/9/2
  * @since 0.1
  */
-public class BaseResponseTest {
+class BaseResponseTest {
 
     @Test
-    public void equals() {
+    void equals() {
         BaseResponse b1 = new BaseResponse<>(BaseStatus.OK, new Car("name", "type"));
         BaseResponse b2 = new BaseResponse<>();
         b1.setStatus(BaseStatus.OK);
@@ -22,7 +21,7 @@ public class BaseResponseTest {
     }
 
     @Test
-    public void notEquals() {
+    void notEquals() {
         BaseResponse b1 = new BaseResponse<>(BaseStatus.OK, new Car("name", "type"));
         BaseResponse b2 = new BaseResponse<>(BaseStatus.NOT_FOUND, new Car("name", "type"));
         BaseResponse b3 = new BaseResponse<>(BaseStatus.OK, new Car("name2", "type"));

@@ -1,7 +1,6 @@
 package springweb.domain;
 
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -9,10 +8,10 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @author Archon  2019/9/5
  * @since 0.1
  */
-public class CarTest {
+class CarTest {
 
     @Test
-    public void equals() {
+    void equals() {
         Car c1 = new Car("prius", "hybrid");
         Car c2 = new Car();
         c2.setName("prius");
@@ -21,7 +20,7 @@ public class CarTest {
     }
 
     @Test
-    public void notEquals() {
+    void notEquals() {
         Car c1 = new Car("prius", "hybrid");
         Car c2 = new Car("prius2", "hybrid");
         Car c3 = new Car("prius", "hybrid2");

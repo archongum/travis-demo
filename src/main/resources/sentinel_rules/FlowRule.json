@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "GET:/cars/{name}",
+    "limitApp": "default",
+    "controlBehavior": 0,
+    "count": 10,
+    "grade": 1,
+    "strategy": 0
+  }
+]
