@@ -1,0 +1,19 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: travis-demo-cm
+data:
+  application.yml: |-
+    spring:
+      application:
+        name: "travis-demo"
+    ---
+    spring:
+      profiles: uat
+      application:
+        name: "travis-demo-uat"
+    ---
+    spring:
+      profiles: prd 
+      application:
+        name: "travis-demo-prd"
