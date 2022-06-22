@@ -20,8 +20,11 @@ public class BaseController {
     @Value("${spring.application.mykey}")
     private String mykey;
 
+    @Value("${spring.datasource.password}")
+    private String password;
+
     @GetMapping("/base/profile")
     private BaseResponse getProfile() {
-        return BaseResponses.ok(String.format("spring.application.name=%s, spring.application.mykey=%s", profile, mykey));
+        return BaseResponses.ok(String.format("spring.application.name=%s, \nspring.application.mykey=%s, \nspring.datasource.password=%s", profile, mykey, password));
     }
 }

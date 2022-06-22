@@ -7,13 +7,15 @@ data:
     spring:
       application:
         name: "travis-demo"
-    ---
+    server:
+      port: 8080
+  application-uat.yml: |-
     spring:
-      profiles: uat
       application:
         name: "travis-demo-uat"
-    ---
+        mykey: uat
+  application-prd.yml: |-
     spring:
-      profiles: prd 
       application:
         name: "travis-demo-prd"
+        mykey: prd
