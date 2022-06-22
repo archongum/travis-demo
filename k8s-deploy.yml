@@ -85,20 +85,3 @@ spec:
             procMount: Default
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    k8s-app: travis-demo
-  name: travis-demo
-  namespace: channel
-spec:
-  selector:
-    k8s-app: travis-demo
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
-      name: travis-demo
-
