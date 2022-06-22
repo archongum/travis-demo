@@ -57,7 +57,7 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
             - name: JDK_JAVA_OPTIONS
-              value: "-Xmx 256M"
+              value: "-Xmx256m"
             - name: SPRING_CONFIG_LOCATION
               value: "/app/config/"
             - name: SPRING_PROFILES_ACTIVE
