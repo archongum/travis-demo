@@ -17,14 +17,14 @@ public class BaseController {
     @Value("${spring.application.name}")
     private String profile;
 
-    @Value("${spring.application.mykey}")
-    private String mykey;
+    @Value("${spring.datasource.username}")
+    private String username;
 
     @Value("${spring.datasource.password}")
     private String password;
 
     @GetMapping("/base/profile")
     private BaseResponse getProfile() {
-        return BaseResponses.ok(String.format("spring.application.name=%s, \nspring.application.mykey=%s, \nspring.datasource.password=%s", profile, mykey, password));
+        return BaseResponses.ok(String.format("spring.application.name=%s, spring.datasource.username=%s, spring.datasource.password=%s", profile, username, password));
     }
 }
