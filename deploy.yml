@@ -63,7 +63,7 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: "uat"
           envFrom:
-            - secretKeyRef:
+            - secretRef:
                 name: travis-demo-secret-uat
           image: registry.cn-guangzhou.aliyuncs.com/archongum/travis-demo:v1
           imagePullPolicy: IfNotPresent
