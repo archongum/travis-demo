@@ -27,7 +27,7 @@ jobs:
         uses: docker/login-action@v2
         env:
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
-        if: ${{ BRANCH_NAME }} == "main"
+        # if: ${{ BRANCH_NAME }} == "main"
         with:
           registry: registry.cn-guangzhou.aliyuncs.com
           username: ${{ secrets.ALIYUN_REGISTRY_USERNAME }}
