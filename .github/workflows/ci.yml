@@ -2,7 +2,7 @@ name: CI - Maven Docker
 
 on:
   push:
-    branches: [ "main", "feat/add_actions" ]
+    branches: [ "main", "actions" ]
   pull_request:
     branches: [ "main" ]
 
