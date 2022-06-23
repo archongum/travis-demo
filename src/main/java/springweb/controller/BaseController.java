@@ -8,6 +8,8 @@ import springweb.util.BaseResponses;
 
 
 /**
+ * Base Controller
+ *
  * @author Archon  2022/6/22
  * @since
  */
