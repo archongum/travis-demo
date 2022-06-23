@@ -21,7 +21,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: mvn -B package --file pom.xml
+        run: |
+          # build
+          mvn -B package --file pom.xml
+          # code coverage
+          bash <(curl -s https://codecov.io/bash)
+        
 
       - name: Login to Aliyun Registry
         uses: docker/login-action@v2
