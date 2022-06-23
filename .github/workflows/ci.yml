@@ -31,6 +31,7 @@ jobs:
           username: ${{ secrets.ALIYUN_REGISTRY_USERNAME }}
           password: ${{ secrets.ALIYUN_REGISTRY_PASSWORD }}
       - name: Push to Aliyun Registry
+        if: ${{ contains( github.ref_name, 'main' ) }}
         env:
           IMAGE_NAME: registry.cn-guangzhou.aliyuncs.com/archongum/travis-demo:v1
         run: |
