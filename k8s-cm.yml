@@ -1,0 +1,20 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: travis-demo-cm
+data:
+  application.yml: |-
+    server:
+      port: 8080
+  application-uat.yml: |-
+    spring:
+      application:
+        name: "travis-demo-uat"
+      datasource:
+        username: uat-username
+  application-prd.yml: |-
+    spring:
+      application:
+        name: "travis-demo-prd"
+      datasource:
+        username: prd-username

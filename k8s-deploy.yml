@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    k8s-app: travis-demo
+  name: travis-demo
+  namespace: channel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: travis-demo
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        k8s-app: travis-demo
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-group
+                    operator: In
+                    values:
+                      - default
+      dnsPolicy: ClusterFirst
+
+      volumes:
+        - name: travis-demo-cm
+          configMap:
+            name: travis-demo-cm
+      containers:
+        - args:
+          env:
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: JDK_JAVA_OPTIONS
+              value: "-Xmx256m"
+            - name: SPRING_CONFIG_LOCATION
+              value: "/app/config/"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "uat"
+          envFrom:
+            - secretRef:
+                name: travis-demo-secret-uat
+          image: registry.cn-guangzhou.aliyuncs.com/archongum/travis-demo:v1
+          imagePullPolicy: IfNotPresent
+          name: travis-demo
+          volumeMounts:
+            - name: travis-demo-cm
+              mountPath: /app/config
+          resources:
+            limits:
+              cpu: "1"
+              memory: 256M
+            requests:
+              cpu: "1"
+              memory: 256M
+          securityContext:
+            capabilities:
+              add:
+                - SYS_PTRACE
+            procMount: Default
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File

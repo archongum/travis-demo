@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11-jdk-slim
 VOLUME /tmp
 COPY target/*.jar app.jar
 EXPOSE 8080
